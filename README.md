@@ -1,2 +1,0 @@
-# ReactContextLatest
-Created with CodeSandbox
