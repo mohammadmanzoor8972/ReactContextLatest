@@ -8,6 +8,7 @@ const Cars = () => (
       <Fragment>
         <h4>Cars:</h4>
         {Object.keys(context.cars).map(carID => (
+          <Fragment>
           <Car
             key={carID}
             name={context.cars[carID].name}
@@ -15,6 +16,8 @@ const Cars = () => (
             incrementPrice={() => context.incrementPrice(carID)}
             decrementPrice={() => context.decrementPrice(carID)}
           />
+          <p>{carID}</p>
+          </Fragment>
         ))}
       </Fragment>
     )}

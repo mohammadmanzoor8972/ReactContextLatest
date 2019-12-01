@@ -3,17 +3,23 @@ import { Component } from "react";
 import React from "react";
 class MyProvider extends Component {
   state = {
-    cars: {
-      car001: { name: "Honda", price: 100 },
-      car002: { name: "BMW", price: 150 },
-      car003: { name: "Mercedes", price: 200 }
-    }
+    cars: [
+       { name: "Honda", price: 100 },
+     { name: "BMW", price: 150 },
+      { name: "Mercedes", price: 200 },
+      { name: "Baleno", price: 100 }
+    ],
+    mobiles: [
+      {name: "Nokia", price:123},
+      {name: "Samsung", price:321}
+    ]
   };
 
   render() {
     return (
       <MyContext.Provider
         value={{
+          mobile: this.state.mobiles,
           cars: this.state.cars,
           incrementPrice: selectedID => {
             const cars = { ...this.state.cars };
